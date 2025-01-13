@@ -1,25 +1,28 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useContext } from "react";
+// import { AuthContext } from "../App";
 
 const BookingPage = () => {
   const [service, setService] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [error, setError] = useState("");
-  const navigate = useNavigate();
+  const { user } = useContext(AuthContext); // Get logged-in user data
 
   const handleBooking = (e) => {
     e.preventDefault();
 
-    // Simple validation for required fields
+    // Validation for required fields
     if (!service || !date || !time) {
       setError("Please fill in all fields.");
       return;
     }
 
-    // Simulate booking success
-    alert("Booking successful!");
-    navigate("/thank-you");
+    // Simulate successful booking
+    alert(`Booking confirmed for ${user.email}`);
+    setService("");
+    setDate("");
+    setTime("");
+    setError("");
   };
 
   return (
@@ -57,9 +60,9 @@ const BookingPage = () => {
           />
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg"
+            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700"
           >
-            Book Now
+            Confirm Booking
           </button>
         </form>
       </div>

@@ -5,7 +5,9 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 bg-gray-800 shadow-md z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-white text-2xl font-semibold">Cleaning Agency</div>
+        <div className="text-white text-2xl font-semibold">
+          101 Detailing & Pressure Wash
+        </div>
         <ul className="flex space-x-6">
           <li>
             <Link to="/" className="text-white hover:text-blue-400">

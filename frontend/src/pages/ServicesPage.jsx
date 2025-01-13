@@ -26,7 +26,6 @@ const ServicesPage = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="container mx-auto p-8">
         <h2 className="text-3xl font-bold text-center text-gray-800 my-8">
           Our Services
