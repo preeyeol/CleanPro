@@ -11,9 +11,9 @@ const navLinks = [
 
 const Navbar = () => {
     return (
-        <div className="absolute z-50 w-full top-1  flex justify-center">
+        <div className="absolute z-50 w-full flex justify-center">
         
-            <div className="flex  text-white w-[60%] bg-blur backdrop-blur-md bg-opacity-60 justify-center items-center gap-28 text-xl font-semibold rounded-lg bg-[#7c9b9a] shadow-md p-4 ">
+            <div className="flex  text-black w-[100%] bg-opacity-60 justify-center items-center gap-28 text-xl font-semibold  bg-white shadow-md p-6 ">
                 {navLinks.map((link) => (
                     <Link
                         key={link.path}

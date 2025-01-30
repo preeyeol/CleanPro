@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const CompanyInfo = () => (
     <div className="md:col-span-4 w-[70%]">
       {/* <img className="w-[160px] h-auto" src={pronexa} alt="Pronexa Logo" /> */}
-      <h1 className="mt-8 leading-[2.2] text-sm font-semibold text-4xl">
+      <h1 className="mt-8 leading-[2.2] font-medium text-2xl">
       We help you restore shine and beauty to every surface!
       </h1>
       
@@ -48,10 +48,10 @@ const Footer=()=> {
     return (
       <footer className="relative w-[98%] mx-auto mb-5 ">
         <div className="bg-[#343434] text-white ">
-          <div className="bg-opacity-100">
+          <div className="ms-28">
             <div className="grid xl:gap-8 md:grid-cols-12">
               <CompanyInfo />
-              <div className="md:col-span-8 mt-20 xl:ml-28">
+              <div className="col-span-8 mt-20 xl:ml-28">
                 <div className="grid md:grid-cols-3 gap-10 mb-4">
                 
                   <ContactInfo />

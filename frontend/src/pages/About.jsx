@@ -1,7 +1,7 @@
 const About=()=>{
     return(
         <div className="h-screen">
-            THIS IS CONTACT PAGE
+       <h1>  THIS IS ABOUT PAGE</h1> 
         </div>
     )
     
