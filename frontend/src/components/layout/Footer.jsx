@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 
 const CompanyInfo = () => (
-    <div className="md:col-span-4 w-[70%]">
-      {/* <img className="w-[160px] h-auto" src={pronexa} alt="Pronexa Logo" /> */}
-      <h1 className="mt-8 leading-[2.2] font-medium text-2xl">
+    <div className="col-span-4 w-[70%]">
+      <h1 className="mt-8 leading-[2.2] font-medium text-2xl mt-16">
       We help you restore shine and beauty to every surface!
       </h1>
       
@@ -34,7 +33,7 @@ const CompanyInfo = () => (
   
 
 const ContactInfo = () => (
-    <div>
+    <div className="">
       <h3 className="text-2xl font-normal mb-2">CONTACT</h3>
       <address className="not-italic leading-8 w-3/4 font-light">
         Austin, Texas, USA <br /> 737-291-4050 <br />{" "}
@@ -46,18 +45,18 @@ const ContactInfo = () => (
 
 const Footer=()=> {
     return (
-      <footer className="relative w-full mx-auto mb-5 ">
+      <footer className="relative w-full mx-auto ">
         <div className="bg-[#6d8d79] text-white ">
           <div className="ms-28">
-            <div className="grid xl:gap-8 md:grid-cols-12">
+            <div className="grid grid-cols-12">
               <CompanyInfo />
               <div className="col-span-8 mt-20 xl:ml-28">
-                <div className="grid md:grid-cols-3 gap-10 mb-4">
+                <div className="grid gap-10 mb-4">
                 
                   <ContactInfo />
                 </div>
-              </div>
             </div>
+              </div>
             <Copyright />
           </div>
         </div>

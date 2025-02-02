@@ -14,7 +14,7 @@ const Hero = () => {
       
       </div>
 
-      <button className="text-white font-roboto font-medium text-base px-8 py-3 bg-[#6d8d79] rounded-md mt-4">
+      <button className="text-white font-roboto font-medium text-base px-8 py-3 bg-[#6d8d79] shadow-2xl rounded-md mt-4">
         <Link to="/about" className="hover:underline">
         About Us
         </Link>

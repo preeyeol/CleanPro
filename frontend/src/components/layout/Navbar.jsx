@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
         <p className="ms-96 font-bold">101 Cleaning</p>
 
-        <button className="text-[#6d8d79] font-roboto font-medium text-base px-8 py-3  bg-white rounded-md hover:underline">
+        <button className="text-[#6d8d79] shadow-2xl font-roboto font-medium text-base px-8 py-3  bg-white rounded-md hover:underline">
         <Link to="/services">
           Our Services
         </Link>
