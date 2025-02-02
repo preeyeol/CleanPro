@@ -46,8 +46,8 @@ const ContactInfo = () => (
 
 const Footer=()=> {
     return (
-      <footer className="relative w-[98%] mx-auto mb-5 ">
-        <div className="bg-[#343434] text-white ">
+      <footer className="relative w-full mx-auto mb-5 ">
+        <div className="bg-[#6d8d79] text-white ">
           <div className="ms-28">
             <div className="grid xl:gap-8 md:grid-cols-12">
               <CompanyInfo />

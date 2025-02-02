@@ -1,6 +1,8 @@
 import Hero from "../components/ui/LandingDesign/Hero"
-import Carousel from "../components/ui/LandingDesign/Images.jsx"
+
 import Second from "../components/ui/LandingDesign/Second"
+import About from "./About.jsx"
+import Contact from "./Contact.jsx"
 
 const LandingPage= ()=>{
 return(
@@ -8,7 +10,8 @@ return(
     <div className='h-auto overflow-hidden'> 
         <Hero/>
         <Second/>
-        <Carousel/>
+
+  
     </div>
 )
 

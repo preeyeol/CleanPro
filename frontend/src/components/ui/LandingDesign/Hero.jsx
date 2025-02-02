@@ -1,22 +1,26 @@
-import BackGround from "../../../assets/images/carImg.jpeg"
+import { Link } from "react-router-dom";
 
-const Hero=()=>{
-    return (<div className="relative h-screen  bg-[#f2f4f7]">
-       
-        <div className=" flex flex-col w-full ms-[8rem]  ">
+const Hero = () => {
+  return (
+    <div className="h-screen bg-white flex flex-col justify-center items-center  px-8 text-center">
+      {/* Text Container */}
+      <div className="mb-4 mt-[15rem]">
+        <h1 className="text-[#6d8d79] text-7xl font-bold">
+          101 Detailing & Pressure Wash
+        </h1>
+        <p className="text-xl text-[#6d8d79] mt-2 w-[40rem] ms-52 items-center leading-8">
+        Your Go-To Pressure Washing Experts in Texas  Reliable, Affordable, and Guaranteed to Make Your Property Shine!
+        </p>
       
-              <h1 className="text-black text-7xl font-semibold w-[40rem] mt-[10rem]">
-              101 Detailing & Pressure Wash  </h1>
-        
-              <p className="text-3xl text-start text-black  my-1 space-y-0.5">
-             Your Trusted Pressure Washing Service In Texas !!
-              </p>
-          </div>
-          <div>
-          <img src={BackGround} alt="car" className="absolute ms-[40rem] h-[25%] w-[25%] mt-[5rem] rounded-4xl "/>
-          </div>
-    
-    </div>)
-}
+      </div>
 
-export default Hero
+      <button className="text-white font-roboto font-medium text-base px-8 py-3 bg-[#6d8d79] rounded-md mt-4">
+        <Link to="/about" className="hover:underline">
+        About Us
+        </Link>
+      </button>
+    </div>
+  );
+};
+
+export default Hero;
