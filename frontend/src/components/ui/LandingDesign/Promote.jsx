@@ -6,7 +6,7 @@ const Promote=()=>{
 <h1>HELLO</h1>
             </div>
             <div className="flex flex-col w-1/2  justify-center items-center">
-<h1 className="text-white text-4xl">PRIVIk</h1>
+<h1 className="text-[#556c72] text-4xl">P R I V I K</h1>
             </div>
         </section>
     )
