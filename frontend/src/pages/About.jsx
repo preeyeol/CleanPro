@@ -1,9 +1,9 @@
-import ContactHead from "../components/ui/ContactDesign/ContactHead"
+import AboutPage from "../components/ui/AboutDesign/AboutSection"
 
 const About=()=>{
     return(
-        <div className="h-screen">
-
+        <div className="h-auto">
+<AboutPage/>
         </div>
     )
     

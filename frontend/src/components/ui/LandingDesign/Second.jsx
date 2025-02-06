@@ -1,5 +1,5 @@
 
-import Image from "./Images";
+import FeatureImageSections from "./Images";
 
 
 const Second = () => {
@@ -7,7 +7,7 @@ const Second = () => {
         <div className=" h-auto bg-white justify-center items-start pt-16 mb-16">
             <div className="">
 
-            <Image/>
+            <FeatureImageSections/>
             </div>
             <div className="flex flex-col items-center">
 

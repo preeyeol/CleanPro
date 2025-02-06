@@ -1,5 +1,3 @@
-// import { useRef, useEffect } from "react";
-
 import one from "../../../assets/images/1.png";
 import two from "../../../assets/images/2.png";
 import three from "../../../assets/images/3.png";
@@ -10,120 +8,89 @@ import seven from "../../../assets/images/7.png";
 import eight from "../../../assets/images/8.png";
 import nine from "../../../assets/images/9.png";
 
-// const slides = [one, two, three, four, five, six, seven, eight, nine];
-
-// const Carousel = () => {
-//   const carouselRef = useRef(null);
-
-//   useEffect(() => {
-//     const scrollInterval = setInterval(() => {
-//       if (carouselRef.current) {
-//         const scrollWidth = carouselRef.current.scrollWidth;
-//         const clientWidth = carouselRef.current.clientWidth;
-//         const scrollLeft = carouselRef.current.scrollLeft;
-
-//         // If at the end, scroll back to the start
-//         if (scrollLeft + clientWidth >= scrollWidth - 1) {
-//           carouselRef.current.scrollTo({ left: 0, behavior: "smooth" });
-//         } else {
-//           carouselRef.current.scrollBy({ left: clientWidth, behavior: "smooth" });
-//         }
-//       }
-//     }, 3000); // Auto-scroll every 3 seconds
-
-//     return () => clearInterval(scrollInterval);
-//   }, []);
-
-//   return (
-//     <div className="relative w-full h-screen flex items-center justify-center">
-//       {/* Scrollable container */}
-//       <div
-//         ref={carouselRef}
-//         className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 p-4"
-//         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-//       >
-//         {slides.map((image, index) => (
-//           <div key={index} className="flex-shrink-0 w-[40vw] snap-center">
-//             <img
-//               src={image}
-//               alt={`Slide ${index + 1}`}
-//               className="w-full h-[60vh] object-cover rounded-xl shadow-lg"
-//             />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Carousel;
-
-const images = [
+const imageCards = [
   {
-    image: one,
-   
+    imageName: one,
+    title: "Beautiful Sunset",
+    description: "A breathtaking view of the sun setting over the mountains.",
   },
   {
-    image: two,
-
+    imageName: two,
+    title: "City Lights",
+    description: "The vibrant nightlife of a bustling cityscape.",
   },
   {
-    image: three,
-
+    imageName: three,
+    title: "Serene Beach",
+    description: "Relax and unwind with this peaceful ocean view.",
   },
   {
-    image: four,
-
+    imageName: four,
+    title: "Majestic Forest",
+    description: "A dense forest full of mystery and adventure.",
   },
   {
-    image: five,
-   
+    imageName: five,
+    title: "Snowy Peaks",
+    description: "A stunning view of snow-covered mountains.",
   },
   {
-    image: six,
-
+    imageName: six,
+    title: "Autumn Leaves",
+    description: "A beautiful display of golden autumn foliage.",
   },
   {
-    image: seven,
-
-  }, {
-    image: eight,
-
-  }, {
-    image: nine,
-
+    imageName: seven,
+    title: "Desert Dunes",
+    description: "Rolling sand dunes under a scorching sun.",
+  },
+  {
+    imageName: eight,
+    title: "Crystal Lake",
+    description: "A pristine lake reflecting the clear blue sky.",
+  },
+  {
+    imageName: nine,
+    title: "Misty Waterfall",
+    description: "A hidden waterfall surrounded by mist and greenery.",
   },
 ];
 
-const ImageCard = ({ item }) => {
+const FeatureImageSections = () => {
   return (
-    <div className="relative group cursor-pointer">
-      <img
-        src={item.image}
-        alt={item.title}
-        className="w-full h-64 object-cover rounded-lg"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/90 rounded-lg flex items-end">
-        <h3 className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-normal p-2 sm:p-3 md:p-4">
-          {item.title}
-        </h3>
+    <div className="overflow-x-auto w-full overflow-hidden lg:h-auto scrollbar-hide">
+      <div className="flex flex-col md:flex-row gap-6 pr-4 md:pr-0">
+        {imageCards.map((items, index) => {
+          return (
+            <div
+              key={index}
+              className="relative group md:min-w-[400px] lg:min-w-[560px] cursor-pointer overflow-hidden"
+            >
+              <img
+                src={items.imageName}
+                alt={items.title}
+                className="w-[340px] h-[240px] md:w-[510px] md:h-[280px] lg:h-[400px] lg:w-[550px] rounded-lg object-cover object-top"
+              />
+              <div
+                className="absolute rounded-lg translate-y-20 md:translate-y-28 text-white transition-transform duration-200 hover:opacity-90 md:opacity-90
+                   group-hover:translate-y-6 top-0 bottom-0 -left-2 xl:w-full xl:h-[400px] 
+                  bg-gradient-to-b from-transparent via-black/50 to-black"
+              >
+                <div className="flex flex-col mx-6 mt-32 gap-3 group-hover:mt-30 md:group-hover:mt-60 md:mt-52 lg:mt-60 md:w-[85%] md:gap-4 md:leading-relaxed">
+                  <h1 className="text-base font-semibold md:text-2xl md:font-normal">
+                    {items.title}
+                  </h1>
+                  <p className="text-xs font-light md:text-base leading-snug">
+                    {items.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
 
-
-const Image = () => {
-  return (
-    <div className="overflow-hidden h-auto">
-      <div className="grid grid-cols-3 gap-4  p-[1rem]   ">
-        {images.map((item) => (
-          <ImageCard item={item} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default Image;
-
+export default FeatureImageSections;

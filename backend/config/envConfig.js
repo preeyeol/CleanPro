@@ -8,7 +8,7 @@ const envConfig = {
     host: process.env.HOST,
     transporterPort: process.env.TRANSPORT,
     nodeEnv: process.env.NODE_ENV,
-    allowedOrigins: process.env.ALLOWED_ORIGINS,
+
   };
   
   module.exports = envConfig;
