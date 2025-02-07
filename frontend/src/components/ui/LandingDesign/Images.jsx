@@ -58,13 +58,13 @@ const imageCards = [
 
 const FeatureImageSections = () => {
   return (
-    <div className="overflow-x-auto w-full overflow-hidden lg:h-auto scrollbar-hide">
-      <div className="flex flex-col md:flex-row gap-6 pr-4 md:pr-0">
+    <div className="overflow-x-auto w-full overflow-hidden h-auto scrollbar-hide ">
+      <div className="flex flex-row gap-6 pr-4 md:pr-0">
         {imageCards.map((items, index) => {
           return (
             <div
               key={index}
-              className="relative group md:min-w-[400px] lg:min-w-[560px] cursor-pointer overflow-hidden"
+              className="relative group min-w-[560px] cursor-pointer overflow-hidden"
             >
               <img
                 src={items.imageName}
@@ -72,8 +72,8 @@ const FeatureImageSections = () => {
                 className="w-[340px] h-[240px] md:w-[510px] md:h-[280px] lg:h-[400px] lg:w-[550px] rounded-lg object-cover object-top"
               />
               <div
-                className="absolute rounded-lg translate-y-20 md:translate-y-28 text-white transition-transform duration-200 hover:opacity-90 md:opacity-90
-                   group-hover:translate-y-6 top-0 bottom-0 -left-2 xl:w-full xl:h-[400px] 
+                className="absolute rounded-lg translate-y-28 text-white transition-transform duration-200 hover:opacity-90 opacity-90
+                   group-hover:translate-y-6 top-0 bottom-0 -left-2 w-full h-[400px] 
                   bg-gradient-to-b from-transparent via-black/50 to-black"
               >
                 <div className="flex flex-col mx-6 mt-32 gap-3 group-hover:mt-30 md:group-hover:mt-60 md:mt-52 lg:mt-60 md:w-[85%] md:gap-4 md:leading-relaxed">

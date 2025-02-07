@@ -7,7 +7,6 @@ const Second = () => {
         <div className=" h-auto bg-white justify-center items-start pt-16 mb-16">
             <div className="">
 
-            <FeatureImageSections/>
             </div>
             <div className="flex flex-col items-center">
 
@@ -18,6 +17,7 @@ const Second = () => {
                 </h1>
          
             </div>
+            <FeatureImageSections/>
         </div>
     );
 }
