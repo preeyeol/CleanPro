@@ -10,10 +10,10 @@ return(
 
     <div className='h-auto overflow-hidden'> 
         <Hero/>
-        <Second/>
         <Divide/>
         <Promote/>
         <Last/>
+        <Second/>
 
   
     </div>
